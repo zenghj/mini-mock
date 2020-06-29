@@ -1,0 +1,21 @@
+{
+  "allowSyntheticDefaultImports": true,
+  "compilerOptions": {
+    "types": ["jest", "node"],
+    "outDir": "dist",
+    "target": "es5",
+    "declaration": true,
+    "downlevelIteration": true,
+    "module": "commonjs",
+    "lib": [
+      "DOM",
+      "ES5",
+      "ScriptHost",
+      "ES6",
+      "DOM.Iterable"
+    ]
+  },
+  "include": [
+    "src",
+  ]
+}

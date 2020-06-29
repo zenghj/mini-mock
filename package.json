@@ -1,0 +1,36 @@
+{
+  "name": "@zenghj/mini-mock",
+  "version": "0.0.1",
+  "description": "a mini nodejs mock tool",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "yarn watch",
+    "watch": "tsc --watch",
+    "type-check": "tsc --noEmit",
+    "build": "tsc",
+    "build:types": "tsc --emitDeclarationOnly",
+    "doc": "typedoc --tsconfig tsconfig.json --out docs src",
+    "release": "",
+    "prerelease": "yarn test:coverage",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "test:coverage": "jest --coverage"
+  },
+
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "@types/node": "^13.13.12",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.2.0",
+    "typedoc": "^0.15.3",
+    "typescript": "^3.7.3"
+  },
+  "author": "zenghj&lt;zenghj@outlook.com&gt;",
+  "license": "MIT",
+  "dependencies": {
+    "chokidar": "^3.4.0",
+    "debug": "^4.1.1",
+    "path-to-regexp": "^6.1.0"
+  }
+}
