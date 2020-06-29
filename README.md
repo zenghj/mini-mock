@@ -22,7 +22,7 @@ module.exports = {
   devServer: {
     before: function(app, server, compiler) {
       app.use(mock({
-        entry: mockOptionFile
+        entry: mockOptionFile // mock config file path
       }));
     }
   }
@@ -37,13 +37,14 @@ const path = require("path");
 const absolute = relative => path.resolve(__dirname, relative);
 
 module.exports = {
-  off: false,
-  routes: {
+  off: false, // whether turn off mock or not
+  routes: { // route map
+    // `${HTTP_METHOD}:${API_PATH}`: `${MOCK_FILE_ABSOLUTE_PATH}`
+    // API_PATH supports express path rule.
     "GET:/test": absolute("test.json"),
     "GET:/test/:id": absolute("test2.json")
   }
 };
 
 ```
-
 For more detail see [example](./example)
