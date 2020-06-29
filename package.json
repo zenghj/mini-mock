@@ -1,8 +1,12 @@
 {
   "name": "@zenghj/mini-mock",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a mini nodejs mock tool",
-  "keywords": ["nodejs", "mock", "webpack devServer"],
+  "keywords": [
+    "nodejs",
+    "mock",
+    "webpack devServer"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -18,7 +22,6 @@
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage"
   },
-
   "devDependencies": {
     "@types/jest": "^24.0.23",
     "@types/node": "^13.13.12",
