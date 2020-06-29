@@ -14,11 +14,11 @@ yarn add @zenghj/mini-mock
 ```
 
 ```js
-
+// webpack.dev.conf.js
 const { mock } = require('@zenghj/mini-mock')
 const mockOptionFile = path.resolve(__dirname, '../mock/index')
-// webpack.dev.conf.js
-{
+module.exports = {
+  // ...
   devServer: {
     before: function(app, server, compiler) {
       app.use(mock({
@@ -27,6 +27,7 @@ const mockOptionFile = path.resolve(__dirname, '../mock/index')
     }
   }
 }
+
 
 ```
 
@@ -46,5 +47,3 @@ module.exports = {
 ```
 
 For more detail see [example](./example)
-
-##

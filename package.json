@@ -2,6 +2,7 @@
   "name": "@zenghj/mini-mock",
   "version": "0.0.1",
   "description": "a mini nodejs mock tool",
+  "keywords": ["nodejs", "mock", "webpack devServer"],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -11,7 +12,7 @@
     "build": "tsc",
     "build:types": "tsc --emitDeclarationOnly",
     "doc": "typedoc --tsconfig tsconfig.json --out docs src",
-    "release": "",
+    "release": "yarn build && yarn publish --access public",
     "prerelease": "yarn test:coverage",
     "test": "jest",
     "test:watch": "jest --watchAll",
@@ -26,7 +27,15 @@
     "typedoc": "^0.15.3",
     "typescript": "^3.7.3"
   },
-  "author": "zenghj&lt;zenghj@outlook.com&gt;",
+  "author": "zenghj<zenghj@outlook.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenghj/mini-mock.git"
+  },
+  "homepage": "https://github.com/zenghj/mini-mock#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "license": "MIT",
   "dependencies": {
     "chokidar": "^3.4.0",
